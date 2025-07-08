@@ -2,6 +2,7 @@ import Link from "next/link";
 import Navbar from "./Navbar";
 import MobileNav from "./MobileNav";
 
+
 export default function Header() {
   return (
     <header className="py-8 xl:py-12 text-white">
