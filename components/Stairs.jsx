@@ -16,9 +16,9 @@ const reverseIndex = (index) => {
 };
 
 export default function Stairs() {
-  <>
-    {[
-      ...Array(6).map((_, index) => {
+  return (
+    <>
+      {Array.from({ length: 6 }).map((_, index) => {
         return (
           <motion.div
             key={index}
@@ -31,10 +31,10 @@ export default function Stairs() {
               ease: "easeInOut",
               delay: reverseIndex(index) * 0.1,
             }}
-            className=" h-full w-full bg-white relative"
+            className="h-full w-full bg-white relative"
           />
         );
-      }),
-    ]}
-  </>;
+      })}
+    </>
+  );
 }
