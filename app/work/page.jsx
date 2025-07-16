@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+import React, { useState } from "react";
 
 const projects = [
   {
@@ -47,7 +48,7 @@ const projects = [
   },
 ];
 
-export default function page() {
+export default function Page() {
   const [project, setProject] = useState(projects[0]);
   const handleSlideChange = (Swiper) => {
     const currentIndex = Swiper.activeIndex;
